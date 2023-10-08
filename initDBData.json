@@ -1,0 +1,273 @@
+{
+  "anuncios": [
+    {
+      "name": "iphone 15",
+      "for_sale": 1,
+      "price": 1000,
+      "photo": "iphone_15",
+      "tags": ["mobile"]
+    },
+
+    {
+      "name": "iphone 14",
+      "for_sale": 0,
+      "price": 850,
+      "photo": "iphone_14",
+      "tags": ["mobile"]
+    },
+
+    {
+      "name": "Xbox Series S",
+      "for_sale": 1,
+      "price": 280,
+      "photo": "xbox_series_S",
+      "tags": ["lifestyle"]
+    },
+    {
+      "name": "Xbox Series X",
+      "for_sale": 1,
+      "price": 480,
+      "photo": "xbox_series_X",
+      "tags": ["lifestyle"]
+    },
+    {
+      "name": "Samsung Galaxy S22",
+      "for_sale": 1,
+      "price": 800,
+      "photo": "samsung_galaxy_s22",
+      "tags": ["mobile"]
+    },
+    {
+      "name": "Samsung Galaxy S23",
+      "for_sale": 0,
+      "price": 1200,
+      "photo": "samsung_galaxy_s23",
+      "tags": ["mobile", "work"]
+    },
+    {
+      "name": "Dell Latitude 5521",
+      "for_sale": 1,
+      "price": 1600,
+      "photo": "dell_latitud_5521",
+      "tags": ["work"]
+    },
+    {
+      "name": "Macbook Air M1",
+      "for_sale": 1,
+      "price": 800,
+      "photo": "macbook_air_m1",
+      "tags": ["work"]
+    },
+    {
+      "name": "Macbook Pro M2",
+      "for_sale": 0,
+      "price": 1500,
+      "photo": "macbook_pro_m2",
+      "tags": ["work"]
+    },
+    {
+      "name": "Daily Stoic",
+      "for_sale": 1,
+      "price": 10,
+      "photo": "book_daily_stoic",
+      "tags": ["lifestyle"]
+    },
+    {
+      "name": "King: A Life",
+      "for_sale": 1,
+      "price": 12,
+      "photo": "book_king_a_life",
+      "tags": ["lifestyle"]
+    },
+    {
+      "name": "Man's search for meaning",
+      "for_sale": 1,
+      "price": 15,
+      "photo": "book_m_s_meaning",
+      "tags": ["lifestyle"]
+    },
+    {
+      "name": "Code Breaker",
+      "for_sale": 0,
+      "price": 10,
+      "photo": "book_code_breaker",
+      "tags": ["lifestyle"]
+    },
+    {
+      "name": "12 rules for life",
+      "for_sale": 1,
+      "price": 20,
+      "photo": "book_12_rfl",
+      "tags": ["lifestyle"]
+    },
+    {
+      "name": "Atomic Habits",
+      "for_sale": 0,
+      "price": 14,
+      "photo": "book_atomic_habits",
+      "tags": ["lifestyle"]
+    },
+    {
+      "name": "Acer SB272 Monitor",
+      "for_sale": 1,
+      "price": 150,
+      "photo": "acer_sb272",
+      "tags": ["lifestyle", "work"]
+    },
+    {
+      "name": "LG Ultrawide FHD Monitor",
+      "for_sale": 0,
+      "price": 350,
+      "photo": "lg_ultrawide",
+      "tags": ["lifestyle", "work"]
+    },
+    {
+      "name": "Dell 32 inch 4k Monitor",
+      "for_sale": 1,
+      "price": 300,
+      "photo": "dell_4k",
+      "tags": ["lifestyle", "work"]
+    },
+    {
+      "name": "LG Ultragear Monitor",
+      "for_sale": 0,
+      "price": 250,
+      "photo": "lg_ultragear",
+      "tags": ["lifestyle", "work"]
+    },
+    {
+      "name": "Everyjournery Bicycle",
+      "for_sale": 0,
+      "price": 200,
+      "photo": "everyjourney_bicycle",
+      "tags": ["lifestyle"]
+    },
+    {
+      "name": "Mongoose Malus Bicycle",
+      "for_sale": 1,
+      "price": 198,
+      "photo": "mongoose_bicycle",
+      "tags": ["lifestyle"]
+    },
+    {
+      "name": "Toyota Crown 2023",
+      "for_sale": 1,
+      "price": 30000,
+      "photo": "toyota_crown",
+      "tags": ["motor"]
+    },
+    {
+      "name": "Toyota Mirai 2019",
+      "for_sale": 1,
+      "price": 23000,
+      "photo": "toyota_mirai",
+      "tags": ["motor"]
+    },
+    {
+      "name": "Toyota Camry 2020",
+      "for_sale": 0,
+      "price": 18000,
+      "photo": "toyota_camry",
+      "tags": ["motor"]
+    },
+    {
+      "name": "Nissan Pathfinder",
+      "for_sale": 1,
+      "price": 30000,
+      "photo": "nissan_pathfinder",
+      "tags": ["motor"]
+    },
+    {
+      "name": "Nissan Frontier",
+      "for_sale": 1,
+      "price": 25000,
+      "photo": "nissan_frontier",
+      "tags": ["motor"]
+    },
+    {
+      "name": "Ford Explorer",
+      "for_sale": 1,
+      "price": 26000,
+      "photo": "ford_explorer",
+      "tags": ["motor"]
+    },
+    {
+      "name": "Ford Escape",
+      "for_sale": 0,
+      "price": 22000,
+      "photo": "ford_escape",
+      "tags": ["motor"]
+    },
+    {
+      "name": "Ford Ranger",
+      "for_sale": 1,
+      "price": 32000,
+      "photo": "ford_ranger",
+      "tags": ["motor"]
+    },
+    {
+      "name": "Jeep Grand Cherokee",
+      "for_sale": 1,
+      "price": 40000,
+      "photo": "grand_cherokee",
+      "tags": ["motor"]
+    },
+    {
+      "name": "Jeep Wrangler",
+      "for_sale": 0,
+      "price": 21000,
+      "photo": "jeep_wrangler",
+      "tags": ["motor"]
+    },
+    {
+      "name": "Jeep Gladiator",
+      "for_sale": 1,
+      "price": 35000,
+      "photo": "jeep_gladiator",
+      "tags": ["motor"]
+    },
+    {
+      "name": "Kawasaki ninja 400",
+      "for_sale": 1,
+      "price": 5000,
+      "photo": "kawasaki_ninja",
+      "tags": ["motor", "lifestyle"]
+    },
+    {
+      "name": "Harley Davidson Fat Boy",
+      "for_sale": 1,
+      "price": 13000,
+      "photo": "harley_fat_boy",
+      "tags": ["motor", "lifestyle"]
+    },
+    {
+      "name": "Kawasaki Vulcan S",
+      "for_sale": 0,
+      "price": 4500,
+      "photo": "kawasaki_vulcan",
+      "tags": ["motor", "lifestyle"]
+    },
+    {
+      "name": "Bushnell tent",
+      "for_sale": 1,
+      "price": 300,
+      "photo": "bushnell_tent",
+      "tags": ["lifestyle"]
+    },
+    {
+      "name": "Hiking shoes",
+      "for_sale": 0,
+      "price": 100,
+      "photo": "hiking shoes",
+      "tags": ["lifestyle"]
+    },
+    {
+      "name": "Gibson guitar",
+      "for_sale": 1,
+      "price": 300,
+      "photo": "gibson_guitar",
+      "tags": ["lifestyle"],
+      "__v": 0
+    }
+  ]
+}
