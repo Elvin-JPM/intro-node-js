@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>NodePop</title>
+  </head>
+  <body>
+    <h1>NodePop</h1>
+    <div class="lang_selector"></div>
+    <form action="submit" method="POST" class="filter-form">
+      <label for="page-number" id="page_number">Page number:</label>
+      <input type="text" id="page" name="page" /><br />
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" /><br />
+
+      <label for="price">Price:</label>
+      <input type="text" id="price" name="price" />
+      <fieldset style="border: none; display: inline-block">
+        <label for="gte">gte</label>
+        <input type="radio" id="gte" name="price-condition" value="gte" />
+        <label for="lte">lte</label>
+        <input type="radio" id="lte" name="price-condition" value="lte" />
+        <label for="gt">gt</label>
+        <input type="radio" id="gt" name="price-condition" value="gt" />
+        <label for="lt">lte</label>
+        <input type="radio" id="lt" name="price-condition" value="lt" />
+      </fieldset>
+      <br />
+
+      <label for="tags">Tags:</label>
+      <input type="text" id="tags" name="tags" /><br />
+
+      <p style="display: inline-block">Ad type:</p>
+      <fieldset style="border: none; display: inline">
+        <label for="for-sale">For Sale</label>
+        <input type="radio" id="for-sale" name="ad-type" value="for-sale" />
+        <label for="looking-to-buy">Looking to buy</label>
+        <input
+          type="radio"
+          id="looking-to-buy"
+          name="ad-type"
+          value="looking-to-buy"
+        />
+      </fieldset>
+      <br />
+
+      <input type="button" value="FILTER RESULTS" class="submit" />
+    </form>
+
+    <div class="ad"></div>
+  </body>
+  <script type="module" src="./index.js"></script>
+</html>
