@@ -11,13 +11,13 @@
     <h1>NodePop</h1>
     <div class="lang_selector"></div>
     <form action="submit" method="POST" class="filter-form">
-      <label for="page-number" id="page_number">Page number:</label>
+      <label for="page-number" id="page-number">Page number:</label>
       <input type="text" id="page" name="page" /><br />
 
-      <label for="name">Name:</label>
+      <label for="name" id="name-label">Name:</label>
       <input type="text" id="name" name="name" /><br />
 
-      <label for="price">Price:</label>
+      <label for="price" id="price-label">Price:</label>
       <input type="text" id="price" name="price" />
       <fieldset style="border: none; display: inline-block">
         <label for="gte">gte</label>
@@ -31,14 +31,14 @@
       </fieldset>
       <br />
 
-      <label for="tags">Tags:</label>
+      <label for="tags" id="tags-label">Tags:</label>
       <input type="text" id="tags" name="tags" /><br />
 
-      <p style="display: inline-block">Ad type:</p>
+      <p style="display: inline-block" id="ad-type">Ad type:</p>
       <fieldset style="border: none; display: inline">
-        <label for="for-sale">For Sale</label>
+        <label for="for-sale" id="for-sale-label">For Sale</label>
         <input type="radio" id="for-sale" name="ad-type" value="for-sale" />
-        <label for="looking-to-buy">Looking to buy</label>
+        <label for="looking-to-buy" id="looking-to-buy-label">Looking to buy</label>
         <input
           type="radio"
           id="looking-to-buy"

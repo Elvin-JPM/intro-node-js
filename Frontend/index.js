@@ -1,40 +1,96 @@
 "use strict";
 
 import i18next from "https://deno.land/x/i18next/index.js";
-const lang = "es";
+
 const lngs = {
   en: { nativeName: "English" },
   es: { nativeName: "Spanish" },
 };
-i18next.init({
-  lng: `${lang}`,
-  // debug: true,
-  resources: {
-    en: {
-      translation: {
-        key: "hello world",
-      },
-    },
-    es: {
-      translation: {
-        key: "Hola mundo 2",
-      },
-    },
-  },
-});
 
-console.log(i18next.t("key"));
+let lang = "";
 
 const myForm = document.querySelector(".filter-form");
 const submitButton = document.querySelector(".submit");
 const container = document.querySelector(".ad");
 const langSelector = document.querySelector(".lang_selector");
-console.log(langSelector);
+
 let filters = "page=1";
 
 Object.keys(lngs).map((lng) => {
-  langSelector.appendChild();
+  const langButton = document.createElement("button");
+  if (lng === "en") {
+    langButton.className = `${lng} language active-lang`;
+  } else {
+    langButton.className = `${lng} language`;
+  }
+  langButton.innerHTML = `${lng}`;
+  langSelector.appendChild(langButton);
 });
+
+const langBtn = document.querySelectorAll(".language");
+console.log(langBtn);
+
+langBtn.forEach((el) => {
+  el.addEventListener("click", () => {
+    langSelector.querySelector(".active-lang").classList.remove("active-lang");
+    el.classList.add("active-lang");
+    lang = el.textContent;
+    changeLanguage(lang);
+  });
+});
+
+// Translations
+console.log(lang);
+
+function changeLanguage(lang) {
+  i18next.init({
+    lng: `${lang}`,
+    // debug: true,
+    resources: {
+      en: {
+        translation: {
+          page_number: "Page number",
+          price: "Price",
+          name: "Name",
+          tags: "Tags",
+          ad_type: "Ad Type:",
+          for_sale: "For sale",
+          looking_to_buy: "Looking to buy",
+        },
+      },
+      es: {
+        translation: {
+          page_number: "Número de página",
+          price: "Precio",
+          name: "Nombre",
+          tags: "Etiquetas",
+          ad_type: "Tipo de anuncio:",
+          for_sale: "Se vende",
+          looking_to_buy: "Se compra",
+        },
+      },
+    },
+  });
+
+  const pageNumber = document.querySelector("#page-number");
+  const price = document.querySelector("#price-label");
+  const name = document.querySelector("#name-label");
+  const tags = document.querySelector("#tags-label");
+  const adType = document.querySelector("#ad-type");
+  const forSale = document.querySelector("#for-sale-label");
+  const lookingToBuy = document.querySelector("#looking-to-buy-label");
+
+  pageNumber.textContent = i18next.t("page_number");
+  price.textContent = i18next.t("price");
+  name.textContent = i18next.t("name");
+  tags.textContent = i18next.t("tags");
+  adType.textContent = i18next.t("ad_type");
+  forSale.textContent = i18next.t("for_sale");
+  lookingToBuy.textContent = i18next.t("looking_to_buy");
+}
+
+//console.log(i18next.t("pagenumber"));
+
 // Event listener for the filter results button
 submitButton.addEventListener("click", () => {
   // To prevent ads from accumulating everytime the filters button is clicked
