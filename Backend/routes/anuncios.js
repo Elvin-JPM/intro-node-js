@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Anuncio = require("../models/anunciosModel");
 const app = express();
+const upload = require("../lib/uploadConfigure");
 
 router.get("/", async (req, res, next) => {
   try {
@@ -94,9 +95,12 @@ router.get("/tags", async (req, res, next) => {
 });
 
 // Creates a new Ad
-router.post("/", async (req, res, next) => {
+router.post("/", upload.single("avatar"), async (req, res, next) => {
   try {
     const newAd = req.body;
+    console.log(newAd);
+    console.log(req.file);
+
     const ad = new Anuncio(newAd);
     const createAd = await ad.save();
     res.status(201).json({
