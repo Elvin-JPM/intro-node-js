@@ -95,13 +95,15 @@ router.get("/tags", async (req, res, next) => {
 });
 
 // Creates a new Ad
-router.post("/", upload.single("avatar"), async (req, res, next) => {
+router.post("/", upload.single("photo"), async (req, res, next) => {
   try {
     const newAd = req.body;
     console.log(newAd);
     console.log(req.file);
 
     const ad = new Anuncio(newAd);
+    ad.photo = req.file.filename;
+    ad.owner = req.usuarioLogadoAPI;
     const createAd = await ad.save();
     res.status(201).json({
       status: "Success",

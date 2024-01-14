@@ -26,7 +26,6 @@ const anuncioSchema = new mongoose.Schema({
   },
   photo: {
     type: String,
-    required: [true, "You must show the product you want to sell or buy"],
   },
   tags: {
     type: [String],
@@ -40,6 +39,7 @@ const anuncioSchema = new mongoose.Schema({
         "Category must be one or more from lifestyle, motor, work or/and mobile",
     },
   },
+  owner: String,
 });
 
 anuncioSchema.statics.filters = function (filter, skip, limit, sort, fields) {
