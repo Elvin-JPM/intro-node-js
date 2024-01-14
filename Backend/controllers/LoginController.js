@@ -26,7 +26,7 @@ class LoginController {
         expiresIn: "2h",
       });
 
-      req.session.usuarioLogado = usuario._id;
+      // req.session.usuarioLogado = usuario._id;
 
       res.json({ jwt: tokenJWT });
     } catch (error) {

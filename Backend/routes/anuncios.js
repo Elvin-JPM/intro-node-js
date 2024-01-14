@@ -3,6 +3,7 @@ const router = express.Router();
 const Anuncio = require("../models/anunciosModel");
 const app = express();
 const upload = require("../lib/uploadConfigure");
+const cote = require("cote");
 
 router.get("/", async (req, res, next) => {
   try {
@@ -98,13 +99,25 @@ router.get("/tags", async (req, res, next) => {
 router.post("/", upload.single("photo"), async (req, res, next) => {
   try {
     const newAd = req.body;
-    console.log(newAd);
-    console.log(req.file);
-
     const ad = new Anuncio(newAd);
     ad.photo = req.file.filename;
+    console.log("ad photo ", ad.photo);
     ad.owner = req.usuarioLogadoAPI;
     const createAd = await ad.save();
+
+    // Creating a thumbnail from the image stored
+    const requester = new cote.Requester({ name: "image-requester" });
+    const resizeParams = {
+      width: 100,
+      height: 100,
+      imagePath: `../public/avatares/${ad.photo}`,
+    };
+
+    requester.send({ type: "resize", ...resizeParams }, (result) => {
+      console.log(result);
+      console.log("Inside requester...");
+    });
+
     res.status(201).json({
       status: "Success",
       data: createAd,

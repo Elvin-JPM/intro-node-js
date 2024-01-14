@@ -1,4 +1,7 @@
 const mongoose = require("mongoose");
+const { Requester } = require("cote");
+
+const requester = new Requester({ name: "nodeapp-imageResize" });
 
 const anuncioSchema = new mongoose.Schema({
   name: {
