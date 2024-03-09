@@ -20,15 +20,11 @@ class LoginController {
         return;
       }
 
-      console.log("JWT_SECRET:", process.env.example.JWT_SECRET);
+      console.log("JWT_SECRET:", "laskh2lsalSadlk");
       //Si las credenciales son correctas
-      const tokenJWT = jwt.sign(
-        { _id: usuario._id },
-        process.env.example.JWT_SECRET,
-        {
-          expiresIn: "2h",
-        }
-      );
+      const tokenJWT = jwt.sign({ _id: usuario._id }, "laskh2lsalSadlk", {
+        expiresIn: "2h",
+      });
 
       // req.session.usuarioLogado = usuario._id;
 

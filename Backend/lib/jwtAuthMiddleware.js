@@ -11,31 +11,27 @@ module.exports = async (req, res, next) => {
       return;
     }
     // comprobaremos tambien que el token es valido
-    const payload = jwt.verify(
-      jwtToken,
-      process.env.example.JWT_SECRET,
-      (err, payload) => {
-        if (err) {
-          if (err.name === "TokenExpiredError") {
-            next(createError(401, "Token has expired."));
-          } else {
-            next(createError(401, "invalid token"));
-          }
-          return;
+    const payload = jwt.verify(jwtToken, "laskh2lsalSadlk", (err, payload) => {
+      if (err) {
+        if (err.name === "TokenExpiredError") {
+          next(createError(401, "Token has expired."));
+        } else {
+          next(createError(401, "invalid token"));
         }
-
-        // Check if the token is still valid based on expiration time
-        const currentTimestamp = Math.floor(Date.now() / 1000); // Convert to seconds
-        if (payload.exp && payload.exp < currentTimestamp) {
-          next(createError(401, "Token has expired"));
-          return;
-        }
-        // apuntamos el usuario logado en la request
-        req.usuarioLogadoAPI = payload._id;
-        // dejamos pasar al siguiente middleware
-        next();
+        return;
       }
-    );
+
+      // Check if the token is still valid based on expiration time
+      const currentTimestamp = Math.floor(Date.now() / 1000); // Convert to seconds
+      if (payload.exp && payload.exp < currentTimestamp) {
+        next(createError(401, "Token has expired"));
+        return;
+      }
+      // apuntamos el usuario logado en la request
+      req.usuarioLogadoAPI = payload._id;
+      // dejamos pasar al siguiente middleware
+      next();
+    });
   } catch (error) {
     next(error);
   }
