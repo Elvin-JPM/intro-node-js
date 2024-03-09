@@ -13,7 +13,7 @@ module.exports = async (req, res, next) => {
     // comprobaremos tambien que el token es valido
     const payload = jwt.verify(
       jwtToken,
-      process.env.JWT_SECRET,
+      process.env.example.JWT_SECRET,
       (err, payload) => {
         if (err) {
           if (err.name === "TokenExpiredError") {
